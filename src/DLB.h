@@ -1,13 +1,14 @@
-typedef struct
+typedef struct DLBNode
 {
-    char key;
-    DLBNode *sibling;
-    DLBNode *child;
-    int level;
+    int val; // DLB holds integer values
+    char letter;
+    struct DLBNode *sibling;
+    struct DLBNode *child;
+    int level; // for level-order traversal
 } DLBNode;
 
-typedef struct
+typedef struct DLBTrie
 {
-    DLBNode *root; // root of trie
-    int n;         // number of keys in trie
+    struct DLBNode *root; // root of trie
+    int n;                // number of keys in trie
 } DLBTrie;
